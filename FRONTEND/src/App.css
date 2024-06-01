@@ -1,4 +1,4 @@
-.App {
+/*.App {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -12,9 +12,9 @@
 .Sider{
   height: 100%;
   width: 300px;
-  background-color: bisque;
+  background-color: rgb(180, 104, 12);
 }
 body {
   margin: 0;
   padding: 0;
-}
+} */
