@@ -3,12 +3,17 @@
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 516px;
+    width: 650px;
     height: 400px;
-    margin-top: 40px;
+    margin-top: 20px;
     background-color: #CDE8E5;
     font-family: Arial, Helvetica, sans-serif;
-  }
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Increase scale on hover */
+}
   
   .card-img {
     width: 100%;
@@ -49,7 +54,7 @@
     margin: 0;
   }
   
-  .book-now-btn {
+  .view-more-btn {
     padding: 8px 16px;
     background-color: #000000;
     color: #fff;
@@ -58,7 +63,16 @@
     cursor: pointer;
   }
   
-  .book-now-btn:hover {
+  .view-more-btn:hover {
     background-color: #00baba;
   }
+.SubHead{
+    margin-left: 0px;
+    text-align: left;
+}
   
+.Heading{
+    margin-left: 0px;
+    margin-top: 10px;
+    text-align: left;
+}
