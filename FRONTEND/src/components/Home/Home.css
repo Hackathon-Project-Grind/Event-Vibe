@@ -1,19 +1,22 @@
+/* General Styles */
 .card {
+    width: 650px;
+    height: 400px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 650px;
-    height: 400px;
-    margin-top: 20px;
-    background-color: #CDE8E5;
+    background-color: #cefbfa;
     font-family: Arial, Helvetica, sans-serif;
     transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.05); /* Increase scale on hover */
-}
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Increase scale on hover */
+  }
   
   .card-img {
     width: 100%;
@@ -66,15 +69,20 @@
   .view-more-btn:hover {
     background-color: #00baba;
   }
-.SubHead{
-    margin-left: 0px;
-    margin-top: 10px;
-    margin-bottom: -20px;
-    text-align: left;
-}
   
-.Heading{
-    margin-left: 0px;
-    margin-top: 10px;
+  /* Subheadings */
+  .SubHead,
+  .Heading {
     text-align: left;
-}
+    margin-left: 20px; /* Adjust as needed */
+    margin-top: 10px;
+  }
+  
+  /* Homepage Styles */
+  .HomePage {
+    background-color: #b2e3de;
+    margin-top: -10px;
+    align-items: center;
+    padding-left: 220px; /* Leave space for the navbar */
+  }
+  

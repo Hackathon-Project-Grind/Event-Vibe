@@ -6,7 +6,7 @@ import { FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
 
 function Home() {
   return (
-    <>
+    <div className="HomePage">
     <h1 className="Heading">Events,</h1>
     <p className="SubHead">Upcoming Events</p>
     <br/>
@@ -53,7 +53,7 @@ function Home() {
       </div>
     </div>
     
-    </>
+    </div>
   );
 }
 
