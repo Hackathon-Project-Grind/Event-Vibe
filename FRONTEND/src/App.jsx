@@ -8,14 +8,10 @@ import './App.css'
 
 function App() {
   return (
-    <>
+
       <div>
         <Register />
-      </div>
-        <div className="App">
-          <Sidebar/>
-        </div>
-    </>
+</div>
   );
 }
 
