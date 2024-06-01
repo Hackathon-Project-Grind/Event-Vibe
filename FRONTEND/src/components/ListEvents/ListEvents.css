@@ -1,0 +1,132 @@
+.page-container {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #CDE8E5;
+}
+
+.header {
+    background-color: #7AB2B2;
+    padding: 0px 0;
+    width: 100%;
+    padding-top: 4%;
+    box-sizing: border-box;
+}
+
+.header h1 {
+    margin: auto 5%;
+    display: flex;
+}
+
+.header button.goback {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-left: 80%;
+    padding: 10px;
+    margin-bottom: 1%;
+}
+
+.subheading {
+    margin-top: 20px;
+}
+
+.registration-form {
+    max-width: 400px;
+    padding: 20px;
+    background-color: #CDE8E5;
+    border-radius: 8px;
+}
+
+.registration-form h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #666;
+}
+
+.registration-form input,
+.registration-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+}
+
+.time label {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.time label:last-child {
+    margin-right: 0;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.image-container input {
+    flex: 1;
+}
+
+.image-container button {
+    margin-left: 10px;
+    padding: 10px;
+}
+
+.registration-form button[type="submit"] {
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 auto; 
+    display: flex;
+
+}
+
+.registration-form button.choosefile {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+.registration-form button.choosefile:hover {
+    background-color: rgba(0, 0, 0, 0.774);
+    cursor: pointer;
+    
+}
+.registration-form button.upload:hover {
+    background-color: rgba(0, 0, 0, 0.774);
+    cursor: pointer;
+    
+}
+.registration-form button.upload {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.registration-form button[type="submit"]:hover {
+    background-color: rgba(0, 0, 0, 0.774);
+
+}

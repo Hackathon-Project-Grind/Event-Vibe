@@ -1,24 +1,20 @@
 import React from 'react';
 import './App.css';
 
-import Register from './components/Register/Register.jsx'; 
-import Login from './components/Login/Login.jsx';
-
-//import Register from './components/Register/Register.jsx'; 
-//import Login from './components/Login/Login.jsx';
-
 import './App.css'
 import Navbar from './components/Navigation/Navbar.jsx';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ListEvents from './components/ListEvents/ListEvents.jsx';
 
 function App() {
   return (
+    <Router>
       <div>
 
-        <Login />
+        <ListEvents />
       </div>
-
+      </Router>
   );
 }
 

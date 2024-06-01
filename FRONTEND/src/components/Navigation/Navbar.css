@@ -1,9 +1,12 @@
+
 .navbar {
     background-color: #7AB2B2;
-    height: 50px;
+    height: 40px;
     display: flex;
     justify-content: start;
     align-items: center;
+    width: 80px;
+
   }
   
   .menu-bars {
@@ -14,7 +17,7 @@
   
   .nav-menu {
     background-color: #7AB2B2;
-    width: 240px;
+    width: 220px;
     height: 100vh;
     display: flex;
     flex-direction: column; /* Changed to column */
@@ -65,7 +68,7 @@
   
   .nav-textsignout a {
     margin-top: 100vh;
-    color: #fe0303;
+    color: black;
   }
   
   .nav-textsignout a:hover {
@@ -84,8 +87,8 @@
   }
   
   .nav-menu-bottom {
-    margin-top: auto; /* Added to push it to the bottom */
-  }
+    margin-top: auto; 
+}
   
   span {
     margin-left: 16px;
