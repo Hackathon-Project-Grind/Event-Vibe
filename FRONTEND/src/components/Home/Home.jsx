@@ -8,6 +8,7 @@ function Home() {
   return (
     <>
     <h1 className="Heading">Events,</h1>
+    <p className="SubHead">Upcoming Events</p>
     <br/>
     <div className="card">
       <img src={musicImage} alt="Event Poster" className="card-img"/>
