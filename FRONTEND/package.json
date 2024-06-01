@@ -10,7 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/icons-material": "^5.15.19",
+    "@mui/material": "^5.15.19",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.18",
     "body-parser": "^1.20.2",
+    "bootstrap": "^5.3.3",
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "mongo": "^0.1.0",
@@ -18,7 +24,12 @@
     "mongoose": "^8.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+<<<<<<< HEAD
+    "react-icons": "^5.2.1",
+    "styled-components": "^6.1.11"
+=======
     "react-router-dom": "^6.23.1"
+>>>>>>> e4196a813e5d8e1ee80e394839aae28ddded4e74
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

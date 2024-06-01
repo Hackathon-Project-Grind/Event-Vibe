@@ -2,6 +2,9 @@ import React from 'react';
 import './App.css';
 import Register from './components/Register/Register.jsx'; 
 import Login from './components/Login/Login.jsx';
+import Sidebar from './Components/Sidebar/Sidebar';
+import './App.css'
+
 
 function App() {
   return (
@@ -9,6 +12,9 @@ function App() {
       <div>
         <Register />
       </div>
+        <div className="App">
+          <Sidebar/>
+        </div>
     </>
   );
 }
