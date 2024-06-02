@@ -1,24 +1,22 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Register.css';
 
 function RegistrationForm() {
-  const [email, setEmail] = useState("");
-  const [fullName, setFullName] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [fullName, setFullName] = useState('');
+  const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({});
-  const [statusMessage, setStatusMessage] = useState("");
+  const [statusMessage, setStatusMessage] = useState('');
+  const navigate = useNavigate();
 
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
 
-  const validateFullName = (name) => {
-    return name.trim().length > 0;
-  };
-
   const validatePassword = (password) => {
-    return password.length >= 6; // Minimum 6 characters for the password
+    return password.length >= 6;
   };
 
   const handleSubmit = async (event) => {
@@ -27,13 +25,10 @@ function RegistrationForm() {
     const newErrors = {};
 
     if (!validateEmail(email)) {
-      newErrors.email = "Please enter a valid email address.";
-    }
-    if (!validateFullName(fullName)) {
-      newErrors.fullName = "Full name is required.";
+      newErrors.email = 'Please enter a valid email address.';
     }
     if (!validatePassword(password)) {
-      newErrors.password = "Password must be at least 6 characters long.";
+      newErrors.password = 'Password must be at least 6 characters long.';
     }
 
     setErrors(newErrors);
@@ -45,22 +40,23 @@ function RegistrationForm() {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({
-            name: fullName,
-            email: email,
-            password: password,
-          }),
+          body: JSON.stringify({ name: fullName, email, password }),
         });
+
         const data = await response.json();
 
         if (response.ok) {
-          setStatusMessage("Registration successful!");
+          setStatusMessage('Registration successful!');
+          setErrors({});
+          setTimeout(() => {
+            navigate('/login');
+          }, 2000);
         } else {
           setStatusMessage(`Registration failed: ${data.message}`);
         }
       } catch (error) {
         console.error('Error registering user:', error);
-        setStatusMessage("Registration failed: Internal server error.");
+        setStatusMessage('Registration failed: Internal server error.');
       }
     }
   };
@@ -70,9 +66,10 @@ function RegistrationForm() {
       <div className="register-header">
         <h1 className="register-title">Welcome to EventVibe</h1>
       </div>
+      <h2 className="register-subtitle">Register To Create An Account</h2>
       <div className="register-center-container">
         <div className="register-form-container">
-          <h2 className="register-subtitle">Register To Create An Account</h2>
+          
           <form className="register-form" onSubmit={handleSubmit}>
             <div className="register-input-group">
               <label className="register-label" htmlFor="email">Email:</label>
@@ -98,7 +95,6 @@ function RegistrationForm() {
                 placeholder="Enter your full name"
                 required
               />
-              {errors.fullName && <p className="register-error">{errors.fullName}</p>}
             </div>
             <div className="register-input-group">
               <label className="register-label" htmlFor="password">Password:</label>
@@ -115,9 +111,10 @@ function RegistrationForm() {
             </div>
             <button className="register-button" type="submit">Register</button>
           </form>
-          {statusMessage && <p className="register-status">{statusMessage}</p>}
+          {statusMessage && <p className={`register-status ${statusMessage.includes('successful') ? 'success' : 'error'}`}>{statusMessage}</p>}
           <p className="register-login-prompt">
-            Already Registered? <a className="register-login-link" href="#">Click here to Login</a>
+            Already have an account?{' '}
+            <a className="register-login-link" href="#" onClick={() => navigate('/')}>Login</a>
           </p>
         </div>
       </div>

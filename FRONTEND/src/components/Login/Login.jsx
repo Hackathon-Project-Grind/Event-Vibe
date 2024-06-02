@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import './Login.css'; // Make sure to import your CSS file
+import { useNavigate } from 'react-router-dom';
+import './Login.css';
 
-function Login() {
+function LoginForm({ onLogin }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({});
   const [statusMessage, setStatusMessage] = useState('');
+  const navigate = useNavigate();
 
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -13,7 +15,7 @@ function Login() {
   };
 
   const validatePassword = (password) => {
-    return password.length >= 6; // Minimum 6 characters for the password
+    return password.length >= 6;
   };
 
   const handleSubmit = async (event) => {
@@ -22,10 +24,10 @@ function Login() {
     const newErrors = {};
 
     if (!validateEmail(email)) {
-      newErrors.email = "Please enter a valid email address.";
+      newErrors.email = 'Please enter a valid email address.';
     }
     if (!validatePassword(password)) {
-      newErrors.password = "Password must be at least 6 characters long.";
+      newErrors.password = 'Password must be at least 6 characters long.';
     }
 
     setErrors(newErrors);
@@ -43,20 +45,12 @@ function Login() {
         const data = await response.json();
 
         if (response.ok) {
-          // Login successful
           setStatusMessage('Login successful!');
           setErrors({});
-          // Redirect to home page
-          setTimeout(() => {
-            window.location.href = '/home';
-          }, 2000); // Redirect after 2 seconds
+          onLogin(); // Mark user as logged in
+          navigate('/home');
         } else {
-          // Login failed
-<<<<<<< HEAD
           setStatusMessage(`Login failed: ${data.message}`);
-=======
-          setStatusMessage(Login failed: ${data.message});
->>>>>>> d16f8787ee7a1a97fab41d894eb6f36bc51ae760
         }
       } catch (error) {
         console.error('Error logging in:', error);
@@ -66,14 +60,15 @@ function Login() {
   };
 
   return (
-    <>
+    <div className="login-page-container">
       <div className="login-header">
-        <h1 className="login-title">Welcome to EventVibe</h1>
+        <h1 className="login-title">Welcome Back to EventVibe</h1>
+     
       </div>
-      <div className="login-container">
+      <h2 className="login-subtitle">Login To Your Account</h2>
+      <div className="login-center-container">
         <div className="login-form-container">
-          <h2 className="login-subtitle">Login to Proceed</h2>
-          <p className="login-description">Enter your email and password to login</p>
+
           <form className="login-form" onSubmit={handleSubmit}>
             <div className="login-input-group">
               <label className="login-label" htmlFor="email">Email:</label>
@@ -103,16 +98,15 @@ function Login() {
             </div>
             <button className="login-button" type="submit">Login</button>
           </form>
-<<<<<<< HEAD
           {statusMessage && <p className={`login-status ${statusMessage.includes('successful') ? 'success' : 'error'}`}>{statusMessage}</p>}
-=======
-          {statusMessage && <p className={login-status ${statusMessage.includes('successful') ? 'success' : 'error'}}>{statusMessage}</p>}
->>>>>>> d16f8787ee7a1a97fab41d894eb6f36bc51ae760
-          <p className="login-register-prompt">New user? <a className="login-register-link" href="#">Click Here To Register</a></p>
+          <p className="login-register-prompt">
+            Not registered yet?{' '}
+            <a className="login-register-link" href="#" onClick={() => navigate('/register')}>Create an account</a>
+          </p>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
-export default Login;
+export default LoginForm;

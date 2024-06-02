@@ -1,37 +1,45 @@
-// Booknow.jsx
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Booknow.css';
 import partyImage from "./assets/music.jpg";
+import foodImage from "./assets/street food.jpg";
 import { FaCalendarAlt, FaMapMarkerAlt, FaClock, FaRupeeSign } from 'react-icons/fa';
-
-
+import Header from '../Header/Header';
 function Booknow() {
+  const navigate = useNavigate();
+
+  const handleBookClick = () => {
+    navigate('/checkout');
+  };
+
   return (
     <div className='container'>
       <div className="hero">
-        <img src={partyImage} alt='party' />
+        <img src={foodImage} alt='party' />
       </div>
       <div className='event'>
-        <h1>Event Name</h1>
-        <h4>Tag Line</h4>
+        <h1>Food Festival</h1>
+        <h4>Street Food Festival : A Heaven for foodies</h4>
         <p>
-          Body text for your whole article or post. We’ll put in some lorem ipsum to show how a filled-out page might look:
-          Excepteur efficient emerging, minim veniam anim aute carefully curated Ginza conversation exquisite perfect nostrud nisi intricate Content. Qui international first-class nulla ut. Punctual adipisicing, essential lovely queen tempor eiusmod irure. Exclusive izakaya charming Scandinavian impeccable aute quality of life soft power pariatur Melbourne occaecat discerning. Qui wardrobe aliquip, et Porter destination Toto remarkable officia Helsinki excepteur Basset hound. Zürich sleepy perfect consectetur.
+          Experience the tantalizing tastes and vibrant vibes of our Street Food Festival! Indulge in a culinary journey through a 
+          kaleidoscope of flavors, from sizzling snacks to savory delights, all served up with a side of live music and entertainment. 
+          Join us for an unforgettable celebration of street food culture that will tantalize your taste buds and ignite your senses.
         </p>
       </div>
       <div className="footer">
         <div className="venue">
-          <h2><FaMapMarkerAlt/>Venue (Full Address)</h2>
+          <h2><FaMapMarkerAlt/>Venue (HITEX Exhibition Center, Hitex Road, Izzathnagar, Kothaguda, Hyderabad, Telangana 500084)</h2>
           <div className="information">
-            <h2><FaCalendarAlt/> Date</h2>
-            <h2><FaClock/>Time</h2>
-            <h2><FaRupeeSign/>Ticket Price</h2>
+            <h2><FaCalendarAlt/> September 10, 2024</h2>
+            <h2><FaClock/> 8:30PM-10:00PM</h2>
+            <h2><FaRupeeSign/> 500</h2>
           </div>
           <br />
-          <button className='Book' type='button'>Book</button>
+          <button className='Book' type='button' onClick={handleBookClick}>Book</button>
         </div>
       </div>
     </div>
+    
   );
 }
 

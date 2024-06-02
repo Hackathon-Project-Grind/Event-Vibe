@@ -1,31 +1,25 @@
-/* ListEvents.css */
-
-.header {
-    background-color: #7AB2B2;
-    padding: 10px 0;
-    width: 400px;
-    box-sizing: border-box;
-    text-align: center;
-    /* Center align the content */
+.header-container {
+  margin-left: 80px; 
+  width: 1400px; 
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #7AB2B2;
+  position: fixed;
 }
 
-.header h1 {
-    margin: 0;
+.home-button {
+  background-color: black;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-left: 800px;
 }
 
-.header button.goback {
-    background-color: #007bff;
-    /* Changing button color */
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    /* Increase border radius for a smoother look */
-    padding: 12px 24px;
-    /* Increase button size */
-    cursor: pointer;
+.home-button:hover {
+  background-color: #0056b3;
 }
 
-.header button.goback:hover {
-    background-color: #0056b3;
-    /* Darken button color on hover */
-}
+

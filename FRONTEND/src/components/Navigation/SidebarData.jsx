@@ -16,14 +16,8 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   {
-    title: 'Browse',
-    path: '/browse',
-    icon: <Io5Icons.IoSearch/>, // Ensure this is correct, and matches your import
-    cName: 'nav-text'
-  },
-  {
     title: 'List Your Event',
-    path: '/list',
+    path: '/listevents',
     icon: <MdIcons.MdFormatListBulletedAdd />,
     cName: 'nav-text'
   },

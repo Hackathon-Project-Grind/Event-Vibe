@@ -1,13 +1,22 @@
-import React from 'react'
-import './Header.css';
-const Header = () => {
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import './Header.css'; // Import CSS file
+
+function Header() {
+  const navigate = useNavigate();
+
+  const handleGoBack = () => {
+    navigate('/home'); // Navigates to the home page
+  };
+
   return (
-    <div>
-      <header className="header">
-        <h1>EventVibe <button className="goback">Go back</button></h1>
-      </header>
+    <div className="header-container">
+      <h1>EventVibe</h1>
+      <button className="home-button" onClick={handleGoBack}>Home</button>
+      <hr />
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;
+
