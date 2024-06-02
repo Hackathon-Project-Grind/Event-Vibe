@@ -10,9 +10,11 @@ import Header from './components/Header/Header.jsx';
 function App() {
   return (
       <div>
+        <Router>
         <Header/>
+        <Navbar/>
         <Booknow/>
-        
+        </Router>
       </div>
   );
 }
