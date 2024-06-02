@@ -4,10 +4,17 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #CDE8E5;
+<<<<<<< HEAD
 }
 
 /* Container */
 .checkout-container {
+=======
+  }
+  
+  /* Container */
+  .checkout-container {
+>>>>>>> d16f8787ee7a1a97fab41d894eb6f36bc51ae760
     width: 600px;
     padding: 20px;
     margin: auto;
@@ -15,16 +22,24 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-top: 8%;
+<<<<<<< HEAD
 }
 
 /* Event Details */
 .event-details {
+=======
+  }
+  
+  /* Event Details */
+  .event-details {
+>>>>>>> d16f8787ee7a1a97fab41d894eb6f36bc51ae760
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
     border: 0px solid black;
     margin-bottom: 20px;
+<<<<<<< HEAD
 }
 
 .event-details h2 {
@@ -61,10 +76,48 @@ body {
 
 /* Quantity Selector */
 .quantity-selector {
+=======
+  }
+  
+  .event-details h2 {
+    font-size: 20px;
+    font-weight: lighter;
+  }
+  
+  /* Flex Container for Pass and Checkout Details */
+  .details-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Pass Details */
+  .pass-details {
+    flex: 1;
+    padding: 20px;
+    margin-right: 20px; /* space between pass-details and checkout-area */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pass-name {
+    font-size: 20px;
+    padding: 10px;
+  }
+  
+  .pass-price {
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Quantity Selector */
+  .quantity-selector {
+>>>>>>> d16f8787ee7a1a97fab41d894eb6f36bc51ae760
     display: flex;
     align-items: center;
     margin-bottom: 20px;
     margin-left: 10px;
+<<<<<<< HEAD
 }
 
 .quantity-selector label {
@@ -73,10 +126,21 @@ body {
 
 /* Checkout Area */
 .checkout-area {
+=======
+  }
+  
+  .quantity-selector label {
+    margin-right: 10px;
+  }
+  
+  /* Checkout Area */
+  .checkout-area {
+>>>>>>> d16f8787ee7a1a97fab41d894eb6f36bc51ae760
     flex: 1;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+<<<<<<< HEAD
 }
 
 .checkout-area h2 {
@@ -89,6 +153,20 @@ body {
 }
 
 /* Checkout Button */
+=======
+  }
+  
+  .checkout-area h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  .checkout-area hr {
+    margin: 10px 0;
+  }
+  
+  /* Checkout Button */
+>>>>>>> d16f8787ee7a1a97fab41d894eb6f36bc51ae760
 .Chekcout-btn {
     display: block;
     margin: 0 auto;
@@ -99,8 +177,17 @@ body {
     border-radius: 4px;
     cursor: pointer;
     margin-top: 20px;
+<<<<<<< HEAD
 }
 
 .Chekcout-btn:hover {
     background-color: #b2e3de;
 }
+=======
+  }
+  
+.Chekcout-btn:hover {
+    background-color: #b2e3de;
+  }
+  
+>>>>>>> d16f8787ee7a1a97fab41d894eb6f36bc51ae760

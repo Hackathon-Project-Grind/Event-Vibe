@@ -43,4 +43,8 @@ function Checkout() {
   );
 }
 
+<<<<<<< HEAD
 export default Checkout;
+=======
+export default Checkout;
+>>>>>>> d16f8787ee7a1a97fab41d894eb6f36bc51ae760

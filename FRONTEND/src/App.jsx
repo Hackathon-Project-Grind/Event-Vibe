@@ -7,6 +7,7 @@ import ListEvents from './components/ListEvents/ListEvents.jsx';
 import Home from './components/Home/Home.jsx';
 import Booknow from './components/Booknow/Booknow.jsx';
 import Header from './components/Header/Header.jsx';
+<<<<<<< HEAD
 import Login from './components/Login/Login.jsx';
 import Checkout from './components/Checkout/Checkout.jsx';
 
@@ -16,6 +17,14 @@ function App() {
       <Register />
     </div>
 
+=======
+import Checkout from './components/Checkout/Checkout.jsx';
+function App() {
+  return (
+      <div>
+        <Checkout/>
+      </div>
+>>>>>>> d16f8787ee7a1a97fab41d894eb6f36bc51ae760
   );
 }
 

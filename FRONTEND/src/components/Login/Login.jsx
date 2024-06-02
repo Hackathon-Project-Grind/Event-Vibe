@@ -52,7 +52,11 @@ function Login() {
           }, 2000); // Redirect after 2 seconds
         } else {
           // Login failed
+<<<<<<< HEAD
           setStatusMessage(`Login failed: ${data.message}`);
+=======
+          setStatusMessage(Login failed: ${data.message});
+>>>>>>> d16f8787ee7a1a97fab41d894eb6f36bc51ae760
         }
       } catch (error) {
         console.error('Error logging in:', error);
@@ -99,7 +103,11 @@ function Login() {
             </div>
             <button className="login-button" type="submit">Login</button>
           </form>
+<<<<<<< HEAD
           {statusMessage && <p className={`login-status ${statusMessage.includes('successful') ? 'success' : 'error'}`}>{statusMessage}</p>}
+=======
+          {statusMessage && <p className={login-status ${statusMessage.includes('successful') ? 'success' : 'error'}}>{statusMessage}</p>}
+>>>>>>> d16f8787ee7a1a97fab41d894eb6f36bc51ae760
           <p className="login-register-prompt">New user? <a className="login-register-link" href="#">Click Here To Register</a></p>
         </div>
       </div>
