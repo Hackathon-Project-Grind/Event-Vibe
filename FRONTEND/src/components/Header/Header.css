@@ -1,0 +1,31 @@
+/* ListEvents.css */
+
+.header {
+    background-color: #7AB2B2;
+    padding: 10px 0;
+    width: 400px;
+    box-sizing: border-box;
+    text-align: center;
+    /* Center align the content */
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header button.goback {
+    background-color: #007bff;
+    /* Changing button color */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    /* Increase border radius for a smoother look */
+    padding: 12px 24px;
+    /* Increase button size */
+    cursor: pointer;
+}
+
+.header button.goback:hover {
+    background-color: #0056b3;
+    /* Darken button color on hover */
+}

@@ -15,10 +15,9 @@ body {
 }
 
 /* Header styling */
-.header {
+.login-header {
     background-color: rgb(124, 182, 201);
     width: 100vw;
-    /* Covering full viewport width */
     text-align: center;
     padding: 20px 0;
     box-sizing: border-box;
@@ -28,15 +27,14 @@ body {
     z-index: 999;
 }
 
-.header h1 {
+.login-title {
     margin: 0;
     font-size: 2.5rem;
     color: #333;
 }
 
 /* Main content container */
-.container {
-    background-color: lightblue;
+.login-container {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -44,49 +42,60 @@ body {
     justify-content: center;
 }
 
-/* Form styling */
-form {
-    display: flex;
-    flex-direction: column;
+.login-form-container {
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-h2,
-p {
+.login-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
     text-align: center;
     color: #333;
 }
 
-h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-p {
+.login-description {
     font-size: 1rem;
     margin-bottom: 20px;
+    text-align: center;
     color: #555;
 }
 
-label {
+/* Form styling */
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-input-group {
+    margin-bottom: 15px;
+}
+
+.login-label {
     display: block;
-    font-size: 1rem;
+    font-weight: bold;
     margin-bottom: 5px;
     color: #333;
 }
 
-input[type="email"],
-input[type="password"] {
-    width: calc(100% - 20px);
+.login-input {
+    width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 1rem;
     box-sizing: border-box;
 }
 
+.login-error {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 5px;
+}
+
 /* Button styling */
-button {
+.login-button {
     background-color: black;
     color: white;
     border: none;
@@ -97,21 +106,38 @@ button {
     transition: background-color 0.3s;
 }
 
-button:hover {
+.login-button:hover {
     background-color: #333;
 }
 
-/* Link styling */
-a {
+/* Status message styling */
+.login-status {
+    margin-top: 20px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.login-status.success {
+    color: green;
+}
+
+.login-status.error {
+    color: red;
+}
+
+/* Link and prompt styling */
+.login-register-prompt {
+    margin-top: 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #333;
+}
+
+.login-register-link {
     color: #007BFF;
     text-decoration: none;
 }
 
-a:hover {
+.login-register-link:hover {
     text-decoration: underline;
-}
-.register-link {
-    margin-top: 20px;
-    font-size: 1rem;
-    text-align: center;
 }

@@ -1,0 +1,94 @@
+/* Booknow.css */
+.container {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    padding: 100px;
+    background-color: #CDE8E5;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .hero img {
+    align-content: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 80%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .event {
+    margin-top: 20px;
+    background-color: #CDE8E5;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .event h1 {
+    font-size: 32px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  
+  .event h4 {
+    color: #666;
+    margin-top: -5px;
+    margin-bottom: 5px;
+  }
+  
+  .event p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .footer {
+    margin-top: 20px;
+  }
+  
+  .venue {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .venue h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .information {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .information h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .Book {
+    margin-left: 45%;
+    margin-right: 55%;
+
+    padding: 10px 20px;
+    border: none;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+  }
+  
+  .Book:hover {
+    background-color: #00baba;
+  }
+  
