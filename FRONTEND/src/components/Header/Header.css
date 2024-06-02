@@ -1,0 +1,23 @@
+.header {
+    background-color: #7AB2B2;
+    padding: 0px 0;
+    width: 100%;
+    padding-top: 4%;
+    box-sizing: border-box;
+
+}
+
+.header h1 {
+    margin: auto 5%;
+    display: flex;
+}
+
+.header button.goback {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-left: 80%;
+    padding: 10px;
+    margin-bottom: 1%;
+}
