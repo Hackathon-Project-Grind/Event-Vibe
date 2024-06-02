@@ -4,12 +4,36 @@ import './Login.css'; // Make sure to import your CSS file
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Handle login logic here
-    console.log('Email:', email);
-    console.log('Password:', password);
+
+    try {
+      const response = await fetch('http://localhost:3001/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        // Login successful
+        setError('');
+        console.log(data.message);
+        // Redirect user to dashboard or another page
+      } else {
+        // Login failed
+        setError(data.message);
+        console.error('Login failed:', data.message);
+      }
+    } catch (error) {
+      console.error('Error logging in:', error);
+      setError('Internal server error');
+    }
   };
 
   return (
@@ -42,6 +66,7 @@ function Login() {
             />
           </div>
           <button type="submit">Login</button>
+          {error && <p className="error">{error}</p>}
           <p className="register-link">New user? <a href="#">Click Here To Register</a></p>
         </form>
       </div>

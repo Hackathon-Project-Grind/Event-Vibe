@@ -6,12 +6,27 @@ function RegistrationForm() {
   const [fullName, setFullName] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Handle form submission here
-    console.log("Email:", email);
-    console.log("Full Name:", fullName);
-    console.log("Password:", password);
+    try {
+      const response = await fetch('http://localhost:3001/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: fullName,
+          email: email,
+          password: password,
+        }),
+      });
+      const data = await response.json();
+      console.log(data);
+      // Handle response, maybe show a success message to the user
+    } catch (error) {
+      console.error('Error registering user:', error);
+      // Handle error, maybe show an error message to the user
+    }
   };
 
   return (
