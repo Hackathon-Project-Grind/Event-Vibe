@@ -1,0 +1,106 @@
+/* Checkout.css */
+
+/* General Styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #CDE8E5;
+  }
+  
+  /* Container */
+  .checkout-container {
+    width: 600px;
+    padding: 20px;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 8%;
+  }
+  
+  /* Event Details */
+  .event-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 0px solid black;
+    margin-bottom: 20px;
+  }
+  
+  .event-details h2 {
+    font-size: 20px;
+    font-weight: lighter;
+  }
+  
+  /* Flex Container for Pass and Checkout Details */
+  .details-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Pass Details */
+  .pass-details {
+    flex: 1;
+    padding: 20px;
+    margin-right: 20px; /* space between pass-details and checkout-area */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pass-name {
+    font-size: 20px;
+    padding: 10px;
+  }
+  
+  .pass-price {
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Quantity Selector */
+  .quantity-selector {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 10px;
+  }
+  
+  .quantity-selector label {
+    margin-right: 10px;
+  }
+  
+  /* Checkout Area */
+  .checkout-area {
+    flex: 1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .checkout-area h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  .checkout-area hr {
+    margin: 10px 0;
+  }
+  
+  /* Checkout Button */
+.Chekcout-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border: none;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+.Chekcout-btn:hover {
+    background-color: #b2e3de;
+  }
+  
